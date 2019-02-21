@@ -8,7 +8,7 @@ Beacause of CORS, a browser with disabled security is required.
 This can be done e.g. by running a command like this:
 
 ```
-"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDevSession"`
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="C:/ChromeDevSession"
 ```
 
 (change the chrome path to your own installation path)
