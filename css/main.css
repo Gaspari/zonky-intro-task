@@ -1,0 +1,125 @@
+html {
+    height: 100%;
+    font: 16px Arial, sans-serif;
+    line-height: 1.1;
+    text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+    margin-top: 3rem;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+.header-1 {
+    font-size: 2rem;
+}
+.header-2 {
+    font-size: 1.7rem;
+}
+
+.block {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+}
+button {
+    -webkit-appearance: none;
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	min-height: 2.2rem;
+	margin: 0 .625rem .625rem 0;
+	padding: 0 1.25rem;
+	font-size: 1rem;
+	line-height: 2.2rem;
+	font-weight: bold;
+	vertical-align: baseline;
+	cursor: pointer;
+    border: none;
+    background: #fff;
+	border: 1px solid #ccc;
+	color: #202020;
+}
+button:hover {
+	box-shadow: 0 .08rem .16rem -.1rem rgba(0,0,0,.4);
+	background-image: linear-gradient(to bottom, #fbfbfb 0%, #f7f7f7 100%);
+}
+button:focus,
+button:hover:focus {
+	border: 1px solid #76b1e2;
+	background-color: #f7f7f7;
+}
+button:active {
+	box-shadow: 0 .16rem .08rem 0 rgba(0,0,0,.2) inset !important;
+}
+button.primary {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+button.primary:hover {
+    background-image: linear-gradient(to bottom, #5cb85c, 0%, #55b055 100%);
+}
+
+
+button:first-child {
+    margin-left: 0
+}
+button:last-child {
+    margin-right: 0
+}
+/* button.selected {
+    background: #aaa;
+} */
+button.selected,
+button.selected:hover,
+button.selected:focus,
+button.selected:active {
+	background: linear-gradient(to top, #f0f0f0 0%, #e3e3e3 100%) !important;
+	box-shadow: 0 0 .1rem rgba(0,0,0,.2) inset !important;
+}
+button.selected {
+	background-color: #00d5ba;
+}
+
+.error {
+    color: red;
+}
+
+input[type='number'] {
+    -webkit-appearance: none;
+	vertical-align: baseline;
+	font-size: 1rem;
+	padding: 0 .5rem;
+	margin-left: 0;
+	height: 2.2rem;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+	-moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+	transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.75);
+	border: 1px solid #bbb;
+}
+input::placeholder {
+    color: #aaa;
+    font: 1rem Arial, sans-serif;
+}
+input[type='number']:focus {
+	outline: none;
+	box-shadow: 0 0 3px #999999 inset;
+	border-color: #2c6eac;
+	background: #fcfcfc;
+}

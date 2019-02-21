@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Zonky average rating value calculator</title>
+
+    <link rel='stylesheet' href='./css/main.css'></link>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js'></script>
+    <script src='./js/config.js'></script>
+    <script src='./js/helpers/utils.js'></script>
+    <script src='./js/marketplace/factories/marketplaceAux.js'></script>
+    <script src='./js/marketplace/controllers/MarketPlaceController.js'></script>
+  </head>
+  <body ng-app='zonky-intro-task'>
+    <div class='wrapper' ng-controller='MarketplaceController as ctrl'>
+
+      <h1 class='header-1'>Average amount calculator</h1>
+      <div class='block'>
+        First select the ratings for which you wish to calculate the average amount (if you don't select any, all ratings will be used).
+        Then the number of items that you want to calculate on (sorted from newest to oldest).
+        After a calculation, you can also see how many items there are totally in the database for that selected rating set.
+      </div>
+
+      <div>
+        <div class='block'>
+          <label>Rating</label>
+          <button type='button' ng-repeat='rating in ctrl.ratings' ng-click='ctrl.toggleRating(rating)' ng-bind='rating' ng-class='{selected: ctrl.activeRatings.indexOf(rating) > -1}'></button>
+        </div>
+        <div class='block'>
+          <div>
+            <label>
+              No. of items
+              <span ng-show='ctrl.availableItemCount' ng-bind='" (total:\u00A0" + ctrl.availableItemCount + ")"'></span>
+            </label>
+          </div>
+          <input type='number' ng-model='ctrl.itemCount' min='0'>
+        </div>
+        <div class='block'>
+          <button type='button' class='primary' ng-click='ctrl.getData()'>Calculate average amount</button>
+        </div>
+      </div>
+      <hr />
+
+      <div class='text-center' ng-if='ctrl.error'>
+        <div class='error'>There was an error loading data.</div>
+      </div>
+      <div class='text-center' ng-if='!ctrl.error'>
+        <div class='header-2' ng-if='!ctrl.loading'>
+          <div ng-if='!ctrl.countsInited'>-</div>
+          <div ng-if='ctrl.countsInited' ng-bind='"The average amount for the selected filters is CZK\u00A0" + ctrl.average + "."'></div>
+        <div class='header-2' ng-if='ctrl.loading'>Loading..</div>
+      </div>
+
+    </div>
+  </body>
+</html>
