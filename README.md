@@ -14,7 +14,7 @@ This can be done e.g. by running a command like this:
 (change the chrome path to your own installation path)
 
 ## Testing
-To run tests, Karma is required. To install Karma and it's dependencies run
+To run tests, Karma is required. To install Karma and it's dependencies, run
 
 ```
 npm i
