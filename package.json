@@ -8,7 +8,7 @@
   "devDependencies": {
     "jasmine": "^2.99.0",
     "jasmine-spec-reporter": "^2.7.0",
-    "karma": "^1.7.1",
+    "karma": "^4.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
     "karma-es6-shim": "^1.0.0",
